@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/illo_white100"
+    tools:context=".Home1_0_Fragment">
+
+    <LinearLayout
+        android:id="@+id/search_bar_home1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/etc_search_bar">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/moim_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:iconifiedByDefault="false"
+            app:queryHint="동아리를 찾아보세요" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/no_moim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_bar_home1"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/illust_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="82dp"
+            android:src="@drawable/iluust_index" />
+
+        <TextView
+            style="@style/IlloKrTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/illust_index"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="92dp"
+            android:gravity="center"
+            android:text="아직 가입한 모임이 없어요"
+            android:textColor="@color/illo_dark_purple" />
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_moim_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_bar_home1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        tools:listitem="@layout/item_moim_card" />
+
+
+</RelativeLayout>

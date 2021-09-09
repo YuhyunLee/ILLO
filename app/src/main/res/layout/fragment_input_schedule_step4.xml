@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title_schedule_due"
+        style="@style/IlloKrTitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:text="마감 날짜"
+        android:textColor="@color/illo_dark_purple" />
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/IlloKrBody1"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_schedule_due"
+        android:layout_alignStart="@+id/title_schedule_due"
+        android:layout_marginTop="6dp"
+        android:text="날짜"
+        android:textColor="@color/illo_black100" />
+
+    <EditText
+        android:id="@+id/input_schedule_due_date"
+        style="@style/IlloKrBody3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_schedule_due"
+        android:layout_alignEnd="@+id/title_schedule_due"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/date"
+        android:background="@android:color/transparent"
+        android:hint="날짜를 선택해주세요"
+        android:textColor="@color/illo_black80"
+        android:textColorHint="@color/illo_black20" />
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/IlloKrBody1"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_alignStart="@+id/title_schedule_due"
+        android:layout_marginTop="6dp"
+        android:text="시간"
+        android:textColor="@color/illo_black100" />
+
+    <EditText
+        android:id="@+id/input_schedule_due_time"
+        style="@style/IlloKrBody3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_alignEnd="@+id/title_schedule_due"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/time"
+        android:background="@android:color/transparent"
+        android:hint="시간을 선택해주세요"
+        android:textColor="@color/illo_black80"
+        android:textColorHint="@color/illo_black20" />
+
+</RelativeLayout>

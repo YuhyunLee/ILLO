@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/illo_white100"
+    tools:context=".FindPwActivity0">
+
+    <TextView
+        android:id="@+id/title_find_pw"
+        style="@style/IlloKrHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="24dp"
+        android:text="비밀번호 재설정"
+        android:textColor="@color/illo_dark_purple" />
+
+    <TextView
+        android:id="@+id/header_pw"
+        style="@style/IlloKrTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_find_pw"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:text="비밀번호"
+        android:textColor="@color/illo_dark_purple" />
+
+    <EditText
+        android:id="@+id/input_pw1"
+        style="@style/IlloKrBody3"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_pw"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="76dp"
+        android:background="@android:color/transparent"
+        android:hint="비밀번호를 입력해주세요"
+        android:password="true"
+        android:textColor="@color/illo_black80"
+        android:textColorHint="@color/illo_black20" />
+
+    <EditText
+        android:id="@+id/input_pw2"
+        style="@style/IlloKrBody3"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_pw1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="76dp"
+        android:background="@android:color/transparent"
+        android:hint="비밀번호를 다시 입력해주세요"
+        android:password="true"
+        android:textColor="@color/illo_black80"
+        android:textColorHint="@color/illo_black20" />
+
+    <TextView
+        android:id="@+id/txt_error_pw"
+        style="@style/IlloKrCaption1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_pw2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="비밀번호가 일치하지 않습니다"
+        android:textColor="@color/illo_light_purple"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/btn_reset_pw"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_long">
+
+        <TextView
+            style="@style/IlloKrTitle1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="재설정하기"
+            android:textColor="@color/illo_white100"
+            android:textSize="16dp" />
+    </LinearLayout>
+</RelativeLayout>

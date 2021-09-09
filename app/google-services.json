@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "760806633417",
+    "project_id": "illo-47da4",
+    "storage_bucket": "illo-47da4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760806633417:android:d6a71563fbb50fa13dc218",
+        "android_client_info": {
+          "package_name": "com.example.illo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "760806633417-kq0uaudbbga1eig8jspj6saiibohadn6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxinzC4wCQ4LrBgEJTJgrruZ2bimJnBoQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "760806633417-kq0uaudbbga1eig8jspj6saiibohadn6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

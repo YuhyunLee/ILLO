@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.illo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ILLO">
+        <activity android:name=".ScheduleActivity"></activity>
+        <activity android:name=".InputScheduleActivity"></activity>
+        <activity android:name=".PostModify1Activity" />
+        <activity android:name=".PostModify0Activity" />
+        <activity android:name=".Post2Activity" />
+        <activity android:name=".Post1Activity" />
+        <activity android:name=".Post0Activity" />
+        <activity android:name=".EditMoimInfoActivity1" />
+        <activity android:name=".EditMoimInfoActivity0" />
+        <activity android:name=".Home2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CreateMoimActivity1" />
+        <activity android:name=".AlarmActivity" />
+        <activity android:name=".CreateMoimActivity0" />
+        <activity android:name=".Home1Activity" />
+        <activity android:name=".FindPwActivity1" />
+        <activity android:name=".FindPwActivity0" />
+        <activity android:name=".FindIdActivity" />
+        <activity android:name=".FindIdPwActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignActivity1" />
+        <activity android:name=".SignActivity0" />
+        <activity android:name=".SplashActivity" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

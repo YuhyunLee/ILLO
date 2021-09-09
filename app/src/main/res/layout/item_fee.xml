@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/card_schedule"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/isCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/icon_uncheck" />
+
+        <TextView
+            android:id="@+id/due"
+            style="@style/IlloKrTitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="-4dp"
+            android:layout_marginEnd="16dp"
+            android:text="8월 31일"
+            android:textColor="@color/illo_light_yellow" />
+
+        <TextView
+            android:id="@+id/fee"
+            style="@style/IlloKrTitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginEnd="16dp"
+            android:text="정기회비"
+            android:textColor="@color/illo_base_color" />
+
+        <TextView
+            android:id="@+id/sum"
+            style="@style/IlloKrCaption2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="-15dp"
+            android:layout_marginEnd="16dp"
+            android:text="15000원"
+            android:textColor="@color/illo_white100" />
+
+        <TextView
+            android:id="@+id/moim_name"
+            style="@style/IlloKrTitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:text="슬램덩크"
+            android:textColor="@color/illo_base_color" />
+
+        <ImageView
+            android:id="@+id/btn_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="-5dp"
+            android:src="@drawable/small_button_pay" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/illo_white100"
+    tools:context=".AlarmActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_alarm"
+            style="@style/IlloKrSubtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="알림"
+            android:textColor="@color/illo_dark_purple"
+            android:textSize="14dp">
+
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_alarm"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        tools:listitem="@layout/item_alarm" />
+
+    <RelativeLayout
+        android:id="@+id/no_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:layout_below="@+id/toolbar_alarm">
+
+        <ImageView
+            android:id="@+id/illust_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="82dp"
+            android:src="@drawable/iluust_index" />
+
+        <TextView
+            style="@style/IlloKrTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/illust_index"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="92dp"
+            android:gravity="center"
+            android:text="최근에 온 알림이 없어요 "
+            android:textColor="@color/illo_dark_purple" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/btn_delete_all"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_long">
+
+        <TextView
+            style="@style/IlloKrTitle1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="전체 삭제하기"
+            android:textAllCaps="false"
+            android:textColor="@color/illo_white100"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

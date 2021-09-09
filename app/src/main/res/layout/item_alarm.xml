@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/illo_white100">
+
+    <TextView
+        android:id="@+id/text_alarm"
+        style="@style/IlloKrSubtitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="김민지님이 게시글에서 나를 언급했습니다"
+        android:textColor="@color/illo_dark_purple" />
+
+    <TextView
+        android:id="@+id/text_from_moim"
+        style="@style/IlloKrBody1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_alarm"
+        android:layout_marginTop="-10dp"
+        android:layout_marginBottom="20dp"
+        android:text="슬램덩크"
+        android:textColor="@color/illo_black60" />
+
+</RelativeLayout>

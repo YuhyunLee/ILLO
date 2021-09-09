@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/draw_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_game_input">
+
+        <TextView
+            android:id="@+id/header_draw"
+            style="@style/IlloKrLargeTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="제비뽑기"
+            android:textColor="@color/illo_white100" />
+
+        <ImageView
+            android:id="@+id/btn_shuffle_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/header_draw"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@+id/header_draw"
+            android:src="@drawable/icon_shuffle" />
+
+        <TextView
+            android:id="@+id/title_joinmember"
+            style="@style/IlloKrCaption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_draw"
+            android:layout_alignStart="@+id/header_draw"
+            android:text="참여자"
+            android:textColor="@color/illo_white100" />
+
+        <EditText
+            android:id="@+id/input_joinmember"
+            style="@style/IlloKrCaption2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header_draw"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_toRightOf="@id/title_joinmember"
+            android:background="@android:color/transparent"
+            android:hint="참여자를 입력하세요"
+            android:textColor="@color/illo_white100"
+            android:textColorHint="@color/illo_white100" />
+
+        <TextView
+            android:id="@+id/title_bang_num"
+            style="@style/IlloKrCaption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_joinmember"
+            android:layout_alignStart="@+id/header_draw"
+            android:layout_marginBottom="20dp"
+            android:text="꽝 개수"
+            android:textColor="@color/illo_white100" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_alignTop="@+id/title_bang_num"
+            android:layout_marginStart="30dp"
+            android:layout_toRightOf="@+id/title_bang_num"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_count_picker_minus" />
+
+            <TextView
+                android:id="@+id/txt_bang_num"
+                style="@style/IlloKrCaption2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="-3dp"
+                android:textColor="@color/illo_white100"
+                android:text="1개"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_count_picker_plus" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

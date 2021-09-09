@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title_schedule_num"
+        style="@style/IlloKrTitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:text="참여 인원"
+        android:textColor="@color/illo_dark_purple" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_schedule_num"
+        android:layout_alignStart="@+id/title_schedule_num"
+        android:layout_alignEnd="@+id/title_schedule_num"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radbtn_nolimit"
+            style="@style/IlloKrBody3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_radio_button"
+            android:text="무제한"
+            android:textAlignment="center"
+            android:textColor="@drawable/selector_radio_text" />
+
+        <RadioButton
+            android:id="@+id/radbtn_limit"
+            style="@style/IlloKrBody3"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_radio_button"
+            android:text="숫자 입력"
+            android:textAlignment="center"
+            android:textColor="@drawable/selector_radio_text" />
+
+        <EditText
+            android:id="@+id/input_schedule_name"
+            style="@style/IlloKrBody3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radbtn_limit"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="32dp"
+            android:background="@android:color/transparent"
+            android:hint="최대 참여 인원을 숫자로 입력해주세요"
+            android:textColor="@color/illo_black80"
+            android:textColorHint="@color/illo_black20" />
+    </RadioGroup>
+
+
+</RelativeLayout>

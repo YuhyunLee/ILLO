@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/draw_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_game_output">
+
+        <TextView
+            android:id="@+id/header_draw"
+            style="@style/IlloKrLargeTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:text="제비뽑기"
+            android:textColor="@color/illo_white100" />
+
+        <ImageView
+            android:id="@+id/member_profile_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header_draw"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/x_small_profile_1" />
+
+        <ImageView
+            android:id="@+id/member_profile_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header_draw"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/member_profile_1"
+            android:src="@drawable/x_small_profile_2" />
+
+        <ImageView
+            android:id="@+id/member_profile_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header_draw"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="72dp"
+            android:layout_toRightOf="@+id/member_profile_2"
+            android:src="@drawable/x_small_profile_3" />
+
+        <ImageView
+            android:id="@+id/draw_result1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/member_profile_1"
+            android:layout_alignStart="@+id/member_profile_1"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/draw_lose" />
+
+        <ImageView
+            android:id="@+id/draw_result2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/member_profile_2"
+            android:layout_alignStart="@+id/member_profile_2"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/draw_win" />
+
+        <ImageView
+            android:id="@+id/draw_result3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/member_profile_3"
+            android:layout_alignStart="@+id/member_profile_3"
+            android:layout_marginStart="-10dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/draw_lose" />
+
+        <TextView
+            style="@style/IlloKrBody1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/draw_result1"
+            android:layout_alignStart="@id/draw_result1"
+            android:layout_alignEnd="@+id/draw_result1"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="통과"
+            android:textColor="@color/illo_dark_purple" />
+
+        <TextView
+            style="@style/IlloKrBody1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/draw_result2"
+            android:layout_alignStart="@id/draw_result2"
+            android:layout_alignEnd="@+id/draw_result2"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="꽝"
+            android:textColor="@color/illo_base_color" />
+
+        <TextView
+            style="@style/IlloKrBody1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/draw_result3"
+            android:layout_alignStart="@id/draw_result3"
+            android:layout_alignEnd="@+id/draw_result3"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="통과"
+            android:textColor="@color/illo_dark_purple" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

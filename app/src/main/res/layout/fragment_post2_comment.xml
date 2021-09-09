@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/commenter_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/commenter_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/medium_profile_2" />
+
+        <TextView
+            android:id="@+id/commenter_name"
+            style="@style/IlloKrSubtitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/commenter_img"
+            android:text="민지"
+            android:textColor="@color/illo_dark_purple" />
+
+        <TextView
+            android:id="@+id/commenter_time"
+            style="@style/IlloKrCaption2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commenter_name"
+            android:layout_alignLeft="@+id/commenter_name"
+            android:layout_marginTop="-18dp"
+            android:text="5분 전"
+            android:textColor="@color/illo_black60" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commenter_info"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/etc_comment">
+
+        <TextView
+            style="@style/IlloKrBody3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="저희 동네도 난리에요ㅠㅠㅠ... 다들 피해 없길 바랍니다"
+            android:textColor="@color/illo_black60" />
+    </RelativeLayout>
+
+</RelativeLayout>

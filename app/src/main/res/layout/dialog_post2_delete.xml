@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/alert_card"
+        android:layout_width="314dp"
+        android:layout_height="314dp"
+        android:layout_above="@+id/btn_cancel"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="54dp"
+        android:background="@drawable/card_alert"
+        android:scaleType="center"
+        android:src="@drawable/iluust_index" />
+
+    <TextView
+        style="@style/IlloKrTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_cancel"
+        android:layout_alignStart="@+id/alert_card"
+        android:layout_alignEnd="@id/alert_card"
+        android:layout_alignBottom="@id/alert_card"
+        android:layout_marginStart="71dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="정말 삭제하시겠어요?"
+        android:textColor="@color/illo_dark_purple" />
+
+    <TextView
+        android:id="@+id/btn_cancel"
+        style="@style/IlloKrTitle1"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/btn_delete"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_long"
+        android:gravity="center"
+        android:text="취소하기"
+        android:textColor="@color/illo_white100"
+        android:textSize="16dp" />
+
+
+    <TextView
+        android:id="@+id/btn_delete"
+        style="@style/IlloKrTitle1"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/button_long"
+        android:gravity="center"
+        android:text="삭제하기"
+        android:textColor="@color/illo_white100"
+        android:textSize="16dp" />
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditMoimInfoActivity1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_edit_moim_info"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/title_edit_moim_info"
+            style="@style/IlloKrSubtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Moim 정보"
+            android:textColor="@color/illo_dark_purple"
+            android:textSize="14dp">
+
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/illust_thumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar_edit_moim_info"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="34dp"
+        android:src="@drawable/illust_thumb" />
+
+    <TextView
+        style="@style/IlloKrTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/illust_thumb"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="92dp"
+        android:gravity="center"
+        android:text="정보가 변경되었습니다"
+        android:textColor="@color/illo_dark_purple" />
+
+    <LinearLayout
+        android:id="@+id/btn_to_home2"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_long">
+
+        <TextView
+            style="@style/IlloKrTitle1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="홈으로 가기"
+            android:textAllCaps="false"
+            android:textColor="@color/illo_white100"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

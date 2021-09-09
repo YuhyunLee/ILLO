@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_schedule"
+        android:layout_marginEnd="4dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/IlloKrLargeTitle1"
+            android:id="@+id/schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="토요경기"
+            android:textColor="@color/illo_light_yellow" />
+
+        <TextView
+            style="@style/IlloKrTitle1"
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="-25dp"
+            android:text="7월 31일"
+            android:textColor="@color/illo_base_color" />
+
+        <TextView
+            style="@style/IlloKrCaption2"
+            android:id="@+id/place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="-20dp"
+            android:text="서울시 동작구 상도로 356"
+            android:textColor="@color/illo_white100" />
+
+        <TextView
+            style="@style/IlloKrCaption2"
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="-15dp"
+            android:text="17:00"
+            android:textColor="@color/illo_white100" />
+
+        <TextView
+            style="@style/IlloKrTitle1"
+            android:id="@+id/moim_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="20dp"
+            android:text="슬램덩크"
+            android:textColor="@color/illo_base_color" />
+
+        <ImageView
+            android:id="@+id/btn_participate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/small_button_participate" />
+    </LinearLayout>
+
+</RelativeLayout>

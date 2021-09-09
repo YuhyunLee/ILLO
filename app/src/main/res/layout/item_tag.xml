@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:background="@drawable/button_small_24">
+
+    <TextView
+        android:id="@+id/txt_name"
+        style="@style/IlloKrCaption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="유민성"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/illo_dark_purple" />
+
+</RelativeLayout>

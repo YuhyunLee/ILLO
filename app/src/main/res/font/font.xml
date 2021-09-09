@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- comfortaa -->
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/comfortaa_bold" />
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/comfortaa_light" />
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/comfortaa_medium" />
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/comfortaa_regular" />
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/comfortaa_semibold" />
+
+    <!-- tmoney round wind -->
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/tmoneyroundwind_regular" />
+
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/tmoneyroundwind_extrabold" />
+
+    <!-- Noto Sans -->
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="900"
+        android:font="@font/noto_sans_kr_black" />
+
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="500"
+        android:font="@font/noto_sans_kr_medium" />
+
+
+</font-family>

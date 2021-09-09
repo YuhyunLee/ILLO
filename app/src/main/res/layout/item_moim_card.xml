@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="100dp"
+    android:layout_margin="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_my_moim">
+
+        <ImageView
+            android:id="@+id/img_moim"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/illust_3_fingers" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_moim_cap"
+        style="@style/IlloKrCaption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="50dp"
+        android:text="서울권 연합 농구 동아리"
+        android:textColor="@color/illo_white100" />
+
+    <TextView
+        android:id="@+id/text_moim_name"
+        style="@style/IlloKrTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="60dp"
+        android:text="슬램덩크"
+        android:textColor="@color/illo_white100" />
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/writer_info"
+        android:layout_marginEnd="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/writer_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/medium_profile_1" />
+
+        <TextView
+            android:id="@+id/writer_name"
+            style="@style/IlloKrSubtitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/writer_img"
+            android:text="유림"
+            android:textColor="@color/illo_dark_purple" />
+
+        <TextView
+            android:id="@+id/writer_date"
+            style="@style/IlloKrCaption2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/writer_name"
+            android:layout_alignLeft="@+id/writer_name"
+            android:layout_marginTop="-18dp"
+            android:text="2021년 7월 25일 19:09"
+            android:textColor="@color/illo_black60" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_post_content"
+        style="@style/IlloKrBody3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/writer_info"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="24dp"
+        android:text="지난주 월요일\n비가 정말 많이 왔죠ㅠㅠ 저희 동네는 고수부지가 잠기는 바람에 강가에 있는 농구장까지 잠겨버렸네요... 이번주는 연습이 어려울듯 합니다 너무 아쉬워요!!"
+        android:textColor="@color/illo_black60" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_img_post2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_post_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/item_image_post" />
+
+    <TextView
+        android:id="@+id/callouts_post2"
+        style="@style/IlloKrCaption2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recyclerview_img_post2"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="16dp"
+        android:text="유민성, 이규현 님과 함께"
+        android:textColor="@color/illo_black20" />
+
+    <ImageView
+        android:id="@+id/icon_likes_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/likes_num"
+        android:src="@drawable/icon_empty_heart"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="4dp"
+        android:layout_alignTop="@id/likes_num" />
+
+    <TextView
+        android:id="@+id/likes_num"
+        style="@style/IlloKrBody2Underline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/callouts_post2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp"
+        android:text="161"
+        android:textColor="@color/illo_black20" />
+
+</RelativeLayout>
