@@ -19,16 +19,17 @@
         <activity android:name=".EditMoimInfoActivity1" />
         <activity android:name=".EditMoimInfoActivity0" />
         <activity android:name=".Home2Activity">
+        </activity>
+        <activity android:name=".CreateMoimActivity1" />
+        <activity android:name=".AlarmActivity" />
+        <activity android:name=".CreateMoimActivity0" />
+        <activity android:name=".Home1Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateMoimActivity1" />
-        <activity android:name=".AlarmActivity" />
-        <activity android:name=".CreateMoimActivity0" />
-        <activity android:name=".Home1Activity" />
         <activity android:name=".FindPwActivity1" />
         <activity android:name=".FindPwActivity0" />
         <activity android:name=".FindIdActivity" />

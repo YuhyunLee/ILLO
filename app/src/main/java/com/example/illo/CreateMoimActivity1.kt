@@ -1,5 +1,6 @@
 package com.example.illo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,8 +25,15 @@ class CreateMoimActivity1 : AppCompatActivity() {
 
         // 뒤로 가기 버튼 설정
         toolbar_create_moim.setNavigationOnClickListener {
-            finish()
+            finish()    // 액티비티 끝내기
             overridePendingTransition(R.anim.no_animation, R.anim.slide_out_left)
+        }
+
+        // 우리 모임 둘러보기 버튼 설정
+        btn_to_moim.setOnClickListener {
+            // 모임 만들기 1 --> 홈2
+            val intent : Intent = Intent(this@CreateMoimActivity1, Home2Activity::class.java)
+            startActivity(intent)
         }
     }
 

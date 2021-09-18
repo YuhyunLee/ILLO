@@ -14,7 +14,6 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_sign0.*
 
 class SignActivity0 : AppCompatActivity() {
-    private lateinit var auth: FirebaseAuth
 
     // 비밀번호 확인
     var isPasswordCorrect : Boolean = false
@@ -23,18 +22,19 @@ class SignActivity0 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign0)
 
-        auth = Firebase.auth
 
         // 가입하기 버튼 눌렀을 때
         btn_sign.setOnClickListener {
 
+            // 이메일, 아이디, 비밀번호 받아오기
             val email : String = input_email.text.toString()
+            val id : String = input_id.text.toString()
             val pass : String = input_pw1.text.toString()
 
             if (isPasswordCorrect)
             {
                 // 새로운 계정 생성
-               createAccount(email, pass)
+
             }
             else {
                 Toast.makeText(
@@ -44,6 +44,7 @@ class SignActivity0 : AppCompatActivity() {
 
         }
 
+        // 이메일 입력받았을 때
         input_email.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
@@ -59,6 +60,7 @@ class SignActivity0 : AppCompatActivity() {
             }
         })
 
+        // 비밀번호 확인 입력받았을 때
         input_pw2.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
@@ -74,61 +76,21 @@ class SignActivity0 : AppCompatActivity() {
                 if (pw1 == pw2)
                 {
                     isPasswordCorrect = true
-                    txt_correct_pw.visibility = View.VISIBLE    // 보이게
-                    txt_error_pw.visibility = View.INVISIBLE    // 안 보이게
+                    // 비밀번호가 올바르다는 문구가 보이게
+                    txt_correct_pw.visibility = View.VISIBLE
+                    txt_error_pw.visibility = View.INVISIBLE
                 }
                 // 일치하지 않는다면
                 else
                 {
                     isPasswordCorrect = false
-                    txt_error_pw.visibility = View.VISIBLE      // 보이게
-                    txt_correct_pw.visibility = View.INVISIBLE  // 안 보이게
+                    // 비밀번호가 틀렸다는 문구가 보이게
+                    txt_error_pw.visibility = View.VISIBLE
+                    txt_correct_pw.visibility = View.INVISIBLE
                 }
             }
         })
 
     }
 
-    public override fun onStart() {
-        super.onStart()
-        // 사용자가 현재 로그인 되어 있는지 확인
-        val currentUser = auth.currentUser
-        if(currentUser != null){    // 이미 로그인되어있다면
-            reload();
-        }
-    }
-
-    private fun createAccount(email: String, password: String) {
-        // [START create_user_with_email]
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, "createUserWithEmail:success")
-                    val user = auth.currentUser
-                    updateUI(user)
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(
-                        baseContext, "계정 생성에 실패했습니다.",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    updateUI(null)
-                }
-            }
-        // [END create_user_with_email]
-    }
-
-    private fun updateUI(user: FirebaseUser?) {
-
-    }
-
-    private fun reload() {
-
-    }
-
-    companion object {
-        private const val TAG = "EmailPassword"
-    }
 }

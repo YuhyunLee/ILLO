@@ -2,6 +2,7 @@ package com.example.illo
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.illo.databinding.ActivityAlarmBinding
 import com.example.illo.databinding.ItemAlarmBinding
 import kotlinx.android.synthetic.main.activity_alarm.*
-
 
 class AlarmActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAlarmBinding
@@ -53,11 +53,12 @@ class AlarmActivity : AppCompatActivity() {
         // setup swipe to remove item
         val itemTouchHelper = ItemTouchHelper(simpleItemTouchCallback)
         itemTouchHelper.attachToRecyclerView(binding.recyclerviewAlarm)
+
     }
 
+
+
     fun createData() : ArrayList<AlarmItem> {
-
-
         alarmList.add(AlarmItem("김민지님이 게시글에서 나를 언급했습니다", "슬램덩크"))
         alarmList.add(AlarmItem("3일 후에 한강 플로깅 일정이 있습니다", "나눔 서포터즈"))
         alarmList.add(AlarmItem("지혜님이 내 글에 댓글을 달았습니다", "열정 봉사단"))

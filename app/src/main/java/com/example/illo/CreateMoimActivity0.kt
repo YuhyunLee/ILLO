@@ -3,11 +3,17 @@ package com.example.illo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import kotlinx.android.synthetic.main.activity_alarm.*
 import kotlinx.android.synthetic.main.activity_create_moim0.*
 import kotlinx.android.synthetic.main.fragment_home1_0.*
 
 class CreateMoimActivity0 : AppCompatActivity() {
+
+    lateinit var moimName : String
+    lateinit var moimIntro : String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_moim0)
@@ -25,11 +31,38 @@ class CreateMoimActivity0 : AppCompatActivity() {
             overridePendingTransition(R.anim.no_animation, R.anim.slide_out_left)
         }
 
+        // 모임 이름 입력 받기
+        input_moim_name.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                // 입력받은 모임 이름 저장
+                moimName = s.toString()
+            }
+        })
+
+        // 모임 소개글 입력 받기
+        input_moim_intro.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                // 입력받은 모임 소개글 저장
+                moimIntro = s.toString()
+            }
+        })
+
         // 설정 버튼
         btn_set.setOnClickListener {
             // 모임 데이터 생성
-            moimList.add(Moim(R.drawable.illust_3_fingers, "연경신","배구 황제 김연경"))
-//            recyclerview_moim_card.getAdapter()?.notifyDataSetChanged()
+
 
             // Intent 생성 (모임 만들기0 -> 모임 만들기1)
             val intent : Intent = Intent(this@CreateMoimActivity0, CreateMoimActivity1::class.java)
