@@ -27,8 +27,8 @@ class CreateMoimActivity0 : AppCompatActivity() {
 
         // 뒤로 가기 버튼 설정
         toolbar_create_moim.setNavigationOnClickListener {
-            finish()
-            overridePendingTransition(R.anim.no_animation, R.anim.slide_out_left)
+            finish()    // 액태비티 끝내기
+            overridePendingTransition(R.anim.no_animation, R.anim.slide_out_left)   // 애니메이션
         }
 
         // 모임 이름 입력 받기
@@ -61,6 +61,7 @@ class CreateMoimActivity0 : AppCompatActivity() {
 
         // 설정 버튼
         btn_set.setOnClickListener {
+            // *----서버/DB 필요----*
             // 모임 데이터 생성
 
 

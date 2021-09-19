@@ -107,6 +107,7 @@ class Home1_0_Fragment : Fragment() {
 
     }
 
+    // *----서버/DB 필요----*
     fun createMoimData() {
         moimList.add(Moim(true, R.drawable.illust_thumb, "이리오개", "유기견 봉사활동"))
         moimList.add(Moim(true, R.drawable.illust_3_fingers, "옵치할사람", "티어가 어디든 환영"))

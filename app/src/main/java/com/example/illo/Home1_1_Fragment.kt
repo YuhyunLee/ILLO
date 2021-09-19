@@ -89,6 +89,7 @@ class Home1_1_Fragment :Fragment() {
     }
 
     //// 데이터 생성하는 함수들
+    // *----서버/DB 필요----*
     fun createScheduleData()
     {
         scheduleDataList.add(ScheduleCard("토요경기","7월 31일","서울시 동작구 상도로 356","17:00","슬램덩크"))

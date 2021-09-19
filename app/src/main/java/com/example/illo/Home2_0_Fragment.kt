@@ -1,5 +1,6 @@
 package com.example.illo
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,8 +14,8 @@ import kotlinx.android.synthetic.main.fragment_home2_0.*
 
 class Home2_0_Fragment : Fragment() {
 
-    lateinit var recyclerView: RecyclerView
-    val data = arrayListOf<Post>()
+    lateinit var recyclerView: RecyclerView // 공지 리사이클러뷰
+    val data = arrayListOf<Post>()  // 게시글 데이터
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,12 +25,25 @@ class Home2_0_Fragment : Fragment() {
 
         val view: View = inflater.inflate(R.layout.fragment_home2_0, container, false)
 
+        // 데이터 생성
         creatPostData()
 
+        // 리사이클러뷰 설정
         recyclerView = view.findViewById(R.id.recyclerview_notice)
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = GridLayoutManager(activity, 2)
         recyclerView.adapter = NoticeAdapter(data)
+
+        // 모임 수정 버튼 클릭 이벤트
+        val editMoimInfoButton = view.findViewById<ImageView>(R.id.btn_edit_moim_info)
+        editMoimInfoButton.setOnClickListener {
+            // 홈2 --> 모임 수정1 액티비티
+            // Fragment --> Activity 이동
+            activity?.let {
+                val intent: Intent = Intent(activity, EditMoimInfoActivity0::class.java)
+                startActivity(intent)
+            }
+        }
 
         return view
     }
@@ -43,6 +57,7 @@ class Home2_0_Fragment : Fragment() {
 
     }
 
+    // *----서버/DB 필요----*
     fun creatPostData()
     {
         data.add(Post(true, "7월 16일 경기 사진 공유합니다 다들 고생하셨어요~", R.drawable.blue_court))

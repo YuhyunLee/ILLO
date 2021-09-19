@@ -30,13 +30,9 @@ class Home2Activity : AppCompatActivity() {
 
         // tab layout과 pager 연동
         home2_tab_layout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabReselected(tab: TabLayout.Tab?) {
+            override fun onTabReselected(tab: TabLayout.Tab?) { }
 
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-
-            }
+            override fun onTabUnselected(tab: TabLayout.Tab?) { }
 
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 //// 탭이 선택됐을 때

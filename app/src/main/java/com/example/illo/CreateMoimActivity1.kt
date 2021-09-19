@@ -34,9 +34,12 @@ class CreateMoimActivity1 : AppCompatActivity() {
             // 모임 만들기 1 --> 홈2
             val intent : Intent = Intent(this@CreateMoimActivity1, Home2Activity::class.java)
             startActivity(intent)
+
+            finish()    // 액티비티 끝내기
         }
     }
 
+    // 커지는 애니메이션
     fun scaleUp(view: View, time: Int) {
         val anim = ScaleAnimation(0f,1.0f,
             0f,1.0f,
