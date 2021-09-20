@@ -35,8 +35,8 @@ class AlarmActivity : AppCompatActivity() {
 
         // 뒤로 가기 버튼 설정
         toolbar_alarm.setNavigationOnClickListener {
-            finish()
-            overridePendingTransition(R.anim.no_animation, R.anim.slide_out_left)
+            finish()    // 액티비티 끝내기
+            overridePendingTransition(R.anim.no_animation, R.anim.slide_out_left)   // 애니메이션
         }
 
         // 전체 삭제하기 버튼

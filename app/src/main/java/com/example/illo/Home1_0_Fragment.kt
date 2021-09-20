@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.ScaleAnimation
 import android.widget.AdapterView
 import android.widget.ImageView
 import androidx.appcompat.widget.SearchView
@@ -13,6 +14,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_home1_0.*
 
 
@@ -95,6 +97,21 @@ class Home1_0_Fragment : Fragment() {
             }
         })
 
+        // fab 버튼
+        val fab_btn = view.findViewById<FloatingActionButton>(R.id.fab_home1_0)
+        fab_btn.setOnClickListener {
+            // fab 애니메이션 실행
+            scaleUp(fab_btn, 500)
+
+            // Intent 생성 (홈1 -> 모임 만들기)
+            // Fragment --> Activity 이동
+            activity?.let {
+                val intent : Intent = Intent(activity, CreateMoimActivity0::class.java)
+                startActivity(intent)
+                // 애니메이션 나중에 다시 수정!!
+            }
+        }
+
         return view
     }
 
@@ -147,6 +164,13 @@ class Home1_0_Fragment : Fragment() {
         }
         // 리스트 데이터가 변경되었으므로 아답터를 갱신하여 검색된 데이터를 화면에 보여준다.
         moimListrecyclerView.adapter?.notifyDataSetChanged()
+    }
+
+    // 애니메이션 함수
+    fun scaleUp(view: View, time: Int) {
+        val anim = ScaleAnimation(1.0f, 2.0f, 1.0f, 2.0f, 200f, 200f)    // 애니메이션 로드
+        anim.duration = time.toLong()   // 애니메이션 지속시간
+        view.startAnimation(anim)   // 애니메이션 실행
     }
 }
 

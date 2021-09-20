@@ -2,11 +2,12 @@ package com.example.illo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.activity_home1.*
 import kotlinx.android.synthetic.main.activity_home2.*
 
 class Home2Activity : AppCompatActivity() {
@@ -14,6 +15,36 @@ class Home2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home2)
 
+        // 탭 레이아웃 설정
+        tabSetting()
+
+        // 하단 네비게이션 설정
+        bottomNaviSetting()
+    }
+
+    fun bottomNaviSetting() {
+        bottomNavi.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.menu_home -> {
+                    // 홈1로 이동
+                    finish()    // 액티비티 끝내기
+                    // 애니메이션은 기본 종료 애니메이션
+
+                    Toast.makeText(this@Home2Activity, "홈1로 이동", Toast.LENGTH_SHORT).show()
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.menu_my -> {
+                    // My 액티비티로 전환
+                    // 액티비티 끝내기
+                    Toast.makeText(this@Home2Activity, "My로 이동", Toast.LENGTH_SHORT).show()
+                    return@OnNavigationItemSelectedListener true
+                }
+            }
+            false
+        })
+    }
+
+    fun tabSetting() {
         // tab layout 설정
         home2_tab_layout.addTab(home2_tab_layout.newTab().setText("홈"))
         home2_tab_layout.addTab(home2_tab_layout.newTab().setText("게시판"))

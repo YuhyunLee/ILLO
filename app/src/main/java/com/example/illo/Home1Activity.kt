@@ -25,10 +25,25 @@ class Home1Activity : AppCompatActivity() {
         tabSetting()
 
         // 하단 네비게이션 설정
+        bottomNaviSetting()
+
+        // 알림 버튼
+        alarm_menu.setOnClickListener {
+            // Intent 생성 (홈1 -> 알림)
+            val intent : Intent = Intent(this@Home1Activity, AlarmActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
+            Log.d("intent", "홈1에서 알림 버튼 클릭")
+        }
+
+    }
+
+    fun bottomNaviSetting() {
         bottomNavi.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.menu_home -> {
-                    // 그대로
+                    // 홈1 메인 화면 탭으로
+                    home1_pager.setCurrentItem(0)   // 0번 탭으로 설정
                     Toast.makeText(this@Home1Activity, "홈1로 이동", Toast.LENGTH_SHORT).show()
                     return@OnNavigationItemSelectedListener true
                 }
@@ -40,28 +55,7 @@ class Home1Activity : AppCompatActivity() {
             }
             false
         })
-
-        // 알림 버튼
-        alarm_menu.setOnClickListener {
-            // Intent 생성 (홈1 -> 알림)
-            val intent : Intent = Intent(this@Home1Activity, AlarmActivity::class.java)
-            startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
-            Log.d("intent", "홈1에서 알림 버튼 클릭")
-        }
-
-        // fab 버튼
-        fab_home1.setOnClickListener {
-            // fab 애니메이션 실행
-            scaleUp(fab_home1, 500)
-
-            // Intent 생성 (홈1 -> 모임 만들기)
-            val intent : Intent = Intent(this@Home1Activity, CreateMoimActivity0::class.java)
-            startActivity(intent)
-            overridePendingTransition(R.anim.fade_in, R.anim.no_animation)
-        }
     }
-
 
     fun tabSetting() {
         // tab layout 설정
@@ -90,11 +84,6 @@ class Home1Activity : AppCompatActivity() {
         })
     }
 
-    fun scaleUp(view: View, time: Int) {
-        val anim = ScaleAnimation(1.0f, 2.0f, 1.0f, 2.0f, 200f, 200f)    // 애니메이션 로드
-        anim.duration = time.toLong()   // 애니메이션 지속시간
-        view.startAnimation(anim)   // 애니메이션 실행
-    }
 }
 
 class Home1_PagerAdapter(

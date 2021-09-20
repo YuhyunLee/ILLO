@@ -74,5 +74,16 @@
         android:layout_marginEnd="20dp"
         tools:listitem="@layout/item_moim_card" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_home1_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/illo_dark_purple"
+        android:src="@drawable/icon_fab_plus"
+        app:maxImageSize="52dp" />
 
 </RelativeLayout>
