@@ -46,7 +46,7 @@ class Home1_0_Fragment : Fragment() {
         // 모임 리사이클러뷰 설정 (내가 가입한 모임)
         moimListrecyclerView = view.findViewById(R.id.recyclerview_moim_card)
         moimListrecyclerView.setHasFixedSize(true)
-        moimListrecyclerView.layoutManager = GridLayoutManager(activity, 2)
+        moimListrecyclerView.layoutManager = GridLayoutManager(activity, 2) // 그리드 레이아웃으로
         moimListrecyclerView.adapter = moimAdapter
 
         // 리사이클러뷰 아이템 클릭 (모임 클릭 시!!)

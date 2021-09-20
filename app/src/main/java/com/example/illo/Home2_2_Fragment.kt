@@ -17,6 +17,8 @@ import com.shrikanthravi.collapsiblecalendarview.widget.UICalendar
 import kotlinx.android.synthetic.main.fragment_home2_2.*
 import java.util.*
 
+//// 홈2(동아리 홈) 스케줄 탭
+
 class Home2_2_Fragment : Fragment() {
     lateinit var recyclerView: RecyclerView
     val data = arrayListOf<MoimSchedule>()

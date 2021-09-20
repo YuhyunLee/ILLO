@@ -1,5 +1,6 @@
 package com.example.illo
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,11 +12,13 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_home2_1.*
 
+//// 홈2(동아리 홈) 게시판 탭
 
 class Home2_1_Fragment : Fragment() {
+    val postList = arrayListOf<Post>()  // 게시글 데이터
 
-    lateinit var recyclerView: RecyclerView
-    val data = arrayListOf<Post>()
+    lateinit var post_recyclerView: RecyclerView    // 게시글 리사이클러뷰
+    val post_Adapter = PostAdapter(postList)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,12 +28,29 @@ class Home2_1_Fragment : Fragment() {
 
         val view: View = inflater.inflate(R.layout.fragment_home2_1, container, false)
 
+        // 게시글 데이터 생성
         creatPostData()
 
-        recyclerView = view.findViewById(R.id.recyclerview_post)
-        recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager = GridLayoutManager(activity, 2)
-        recyclerView.adapter = PostAdapter(data)
+        // 게시글 리사이클러뷰 설정
+        post_recyclerView = view.findViewById(R.id.recyclerview_post)
+        post_recyclerView.setHasFixedSize(true)
+        post_recyclerView.layoutManager = GridLayoutManager(activity, 2)    // 그리드 레이아웃으로
+        post_recyclerView.adapter = post_Adapter
+
+
+        // 리사이클러뷰 아이템 클릭 (게시글 클릭 시!!)
+        post_Adapter.setItemClickListener(object: PostAdapter.OnItemClickListener{
+            override fun onClick(v: View, position: Int) {
+                // 클릭 시 이벤트 작성
+
+                // 홈2 --> 포스트 액티비티로 이동
+                // Fragment --> Activity 이동
+                activity?.let {
+                    val intent: Intent = Intent(activity, PostActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+        })
 
         return view
     }
@@ -39,18 +59,18 @@ class Home2_1_Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // 게시글이 없을 때
-        if (data.isNullOrEmpty())
+        if (postList.isNullOrEmpty())
             no_post.visibility = View.VISIBLE
     }
 
     fun creatPostData()
     {
-        data.add(Post(true, "7월 16일 경기 사진 공유합니다 다들 고생하셨어요~", R.drawable.blue_court))
-        data.add(Post(true, "코로나 19관련 경기 공지", R.drawable.masks))
-        data.add(Post(true, "하반기 활동에 대한 공지", R.drawable.playing_basketball))
-        data.add(Post(false,"지난주 월요일", R.drawable.raining))
-        data.add(Post(false,"에이셉 내 통장잔고 반쪼가리", R.drawable.wallet))
-        data.add(Post(false,"울집 고앵이 자랑", R.drawable.cat))
+        postList.add(Post(true, "7월 16일 경기 사진 공유합니다 다들 고생하셨어요~", R.drawable.blue_court))
+        postList.add(Post(true, "코로나 19관련 경기 공지", R.drawable.masks))
+        postList.add(Post(true, "하반기 활동에 대한 공지", R.drawable.playing_basketball))
+        postList.add(Post(false,"지난주 월요일", R.drawable.raining))
+        postList.add(Post(false,"에이셉 내 통장잔고 반쪼가리", R.drawable.wallet))
+        postList.add(Post(false,"울집 고앵이 자랑", R.drawable.cat))
     }
 }
 
@@ -79,15 +99,32 @@ class PostAdapter(private val dataSet: List<Post>) :
 
     // Replace the contents of a view (invoked by the layout manager)
     override fun onBindViewHolder(viewHolder: PostViewHolder, position: Int) {
+        // 데이터 설정
         viewHolder.title.text = dataSet[position].title
 
         viewHolder.thumbnail.setBackgroundResource(R.drawable.card_content)
         viewHolder.thumbnail.clipToOutline = true
         viewHolder.thumbnail.setImageResource(dataSet[position].thumbnail)
+
+        // 클릭 이벤트 리스너
+        // (1) 리스트 내 항목 클릭 시 onClick() 호출
+        viewHolder.itemView.setOnClickListener {
+            itemClickListener.onClick(it, position)
+        }
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount() = dataSet.size
 
+    // (2) 리스너 인터페이스
+    interface OnItemClickListener {
+        fun onClick(v: View, position: Int)
+    }
+    // (3) 외부에서 클릭 시 이벤트 설정
+    fun setItemClickListener(onItemClickListener: OnItemClickListener) {
+        this.itemClickListener = onItemClickListener
+    }
+    // (4) setItemClickListener로 설정한 함수 실행
+    private lateinit var itemClickListener : OnItemClickListener
 }
 
