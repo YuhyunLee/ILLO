@@ -28,12 +28,12 @@ class Post0_Fragment : Fragment() {
         createData()
 
         // 리사이클러뷰 정리
-        call_recyclerView = view.findViewById(R.id.recyclerview_calouts_post)
+        call_recyclerView = view.findViewById(R.id.recyclerview_calouts_write_post)
         call_recyclerView.setHasFixedSize(true)
         call_recyclerView.layoutManager = GridLayoutManager(activity, 7)
         call_recyclerView.adapter = CaloutsAdapter(call_data)
 
-        img_recyclerView = view.findViewById(R.id.recyclerview_img_post)
+        img_recyclerView = view.findViewById(R.id.recyclerview_img_write_post)
         img_recyclerView.setHasFixedSize(true)
         img_recyclerView.layoutManager = LinearLayoutManager(activity)
         img_recyclerView.adapter = PostImageAdapter(img_data)

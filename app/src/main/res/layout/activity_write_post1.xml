@@ -8,13 +8,13 @@
     tools:context=".WritePost1Activity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_post"
+        android:id="@+id/toolbar_write_post"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentTop="true">
 
         <TextView
-            android:id="@+id/title_post"
+            android:id="@+id/title_write_post"
             style="@style/IlloKrSubtitle2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,10 +36,10 @@
     </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
-        android:id="@+id/step_post"
+        android:id="@+id/step_write_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar_post">
+        android:layout_below="@+id/toolbar_write_post">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -68,10 +68,10 @@
     </RelativeLayout>
 
     <fragment
-        android:id="@+id/page_post_step2"
+        android:id="@+id/page_write_post_step2"
         android:name="com.example.illo.WritePost1_Fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/step_post" />
+        android:layout_below="@+id/step_write_post" />
 
 </RelativeLayout>

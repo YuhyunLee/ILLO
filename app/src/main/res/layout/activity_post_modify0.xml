@@ -35,7 +35,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
-        android:id="@+id/step_post"
+        android:id="@+id/step_write_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar_post_modify">
@@ -77,10 +77,10 @@
         android:id="@+id/fab_game"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/fab_post"
-        android:layout_alignTop="@+id/fab_post"
-        android:layout_alignEnd="@+id/fab_post"
-        android:layout_alignBottom="@+id/fab_post"
+        android:layout_alignStart="@+id/fab_write_post"
+        android:layout_alignTop="@+id/fab_write_post"
+        android:layout_alignEnd="@+id/fab_write_post"
+        android:layout_alignBottom="@+id/fab_write_post"
         android:backgroundTint="@color/illo_dark_purple"
         android:src="@drawable/icon_fab_game"
         app:maxImageSize="52dp" />
@@ -89,16 +89,16 @@
         android:id="@+id/fab_gallery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/fab_post"
-        android:layout_alignTop="@+id/fab_post"
-        android:layout_alignEnd="@+id/fab_post"
-        android:layout_alignBottom="@+id/fab_post"
+        android:layout_alignStart="@+id/fab_write_post"
+        android:layout_alignTop="@+id/fab_write_post"
+        android:layout_alignEnd="@+id/fab_write_post"
+        android:layout_alignBottom="@+id/fab_write_post"
         android:backgroundTint="@color/illo_dark_purple"
         android:src="@drawable/icon_fab_gallery"
         app:maxImageSize="52dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_post"
+        android:id="@+id/fab_write_post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

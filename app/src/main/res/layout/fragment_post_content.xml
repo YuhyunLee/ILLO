@@ -52,7 +52,7 @@
         android:textColor="@color/illo_black60" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview_img_post2"
+        android:id="@+id/recyclerview_img_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_post_content"
@@ -61,11 +61,11 @@
         tools:listitem="@layout/item_image_post" />
 
     <TextView
-        android:id="@+id/callouts_post2"
+        android:id="@+id/callouts_post"
         style="@style/IlloKrCaption2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/recyclerview_img_post2"
+        android:layout_below="@id/recyclerview_img_post"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="88dp"
         android:layout_marginBottom="16dp"
@@ -87,7 +87,7 @@
         style="@style/IlloKrBody2Underline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/callouts_post2"
+        android:layout_alignTop="@+id/callouts_post"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="24dp"
         android:text="161"

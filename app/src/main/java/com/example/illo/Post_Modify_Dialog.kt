@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import kotlinx.android.synthetic.main.dialog_post2_modify.*
+import kotlinx.android.synthetic.main.dialog_post_modify.*
 
 class Post_Modify_Dialog : DialogFragment() {
 
@@ -21,7 +21,7 @@ class Post_Modify_Dialog : DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.dialog_post2_modify, container, false)
+        val view: View = inflater.inflate(R.layout.dialog_post_modify, container, false)
 
         return view
 

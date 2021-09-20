@@ -20,7 +20,7 @@ class Post_Content_Fragment : Fragment() {
         // 가져오는 레이아웃 바꾸기
         val view: View = inflater.inflate(R.layout.fragment_post_content, container, false)
 
-        img_recyclerView = view.findViewById(R.id.recyclerview_img_post2)
+        img_recyclerView = view.findViewById(R.id.recyclerview_img_post)
         img_recyclerView.setHasFixedSize(true)
         img_recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         img_recyclerView.adapter = PostImageAdapter(img_data)

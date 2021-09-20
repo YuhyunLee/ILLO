@@ -36,7 +36,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
-        android:id="@+id/step_post"
+        android:id="@+id/step_write_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar_post_modify">

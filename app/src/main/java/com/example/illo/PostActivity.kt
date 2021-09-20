@@ -2,7 +2,7 @@ package com.example.illo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_post2.*
+import kotlinx.android.synthetic.main.activity_post.*
 
 class PostActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
