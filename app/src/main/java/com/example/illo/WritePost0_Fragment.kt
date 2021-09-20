@@ -23,7 +23,7 @@ class Post0_Fragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_post0, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_write_post0, container, false)
 
         createData()
 

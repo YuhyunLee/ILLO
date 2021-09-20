@@ -7,11 +7,11 @@ import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_post0.*
 
-class Post0Activity : AppCompatActivity() {
+class WritePost0Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_post0)
+        setContentView(R.layout.activity_write_post0)
 
         // 플로팅 버튼 클릭시 에니메이션 동작 기능
         fab_post.setOnClickListener {

@@ -14,8 +14,8 @@
         <activity android:name=".PostModify1Activity" />
         <activity android:name=".PostModify0Activity" />
         <activity android:name=".Post2Activity" />
-        <activity android:name=".Post1Activity" />
-        <activity android:name=".Post0Activity" />
+        <activity android:name=".WritePost1Activity" />
+        <activity android:name=".WritePost0Activity" />
         <activity android:name=".EditMoimInfoActivity1" />
         <activity android:name=".EditMoimInfoActivity0" />
         <activity android:name=".Home2Activity">
