@@ -4,14 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_post2.*
 
-class Post2Activity : AppCompatActivity() {
+class PostActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_post2)
+        setContentView(R.layout.activity_post)
 
         btn_post_modify.setOnClickListener{
 //            Post2_Dialog_Modify().show(supportFragmentManager, "Post2_Modify_Dialog")
-            Post2_Delete_Dialog().show(supportFragmentManager, "Post2_Delete_Dialog")
+            Post_Delete_Dialog().show(supportFragmentManager, "Post2_Delete_Dialog")
 
         }
 

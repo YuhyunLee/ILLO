@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class Post2_Content_Fragment : Fragment() {
+class Post_Content_Fragment : Fragment() {
 
     lateinit var img_recyclerView: RecyclerView
 
@@ -18,7 +18,7 @@ class Post2_Content_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // 가져오는 레이아웃 바꾸기
-        val view: View = inflater.inflate(R.layout.fragment_post2_content, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_post_content, container, false)
 
         img_recyclerView = view.findViewById(R.id.recyclerview_img_post2)
         img_recyclerView.setHasFixedSize(true)

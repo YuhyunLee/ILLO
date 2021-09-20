@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Post2Activity">
+    tools:context=".PostActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_post2"
@@ -42,7 +42,7 @@
 
             <fragment
                 android:id="@+id/fragment_post2_content"
-                android:name="com.example.illo.Post2_Content_Fragment"
+                android:name="com.example.illo.Post_Content_Fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/recyclerview_hashtag"
@@ -51,7 +51,7 @@
 
             <fragment
                 android:id="@+id/fragment_post_comment"
-                android:name="com.example.illo.Post2_Comment_Fragment"
+                android:name="com.example.illo.Post_Comment_Fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/fragment_post2_content"
