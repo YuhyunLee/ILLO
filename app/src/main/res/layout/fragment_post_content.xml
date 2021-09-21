@@ -41,7 +41,7 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/text_post_content"
+        android:id="@+id/post_content"
         style="@style/IlloKrBody3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         android:id="@+id/recyclerview_img_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_post_content"
+        android:layout_below="@id/post_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         tools:listitem="@layout/item_image_post" />

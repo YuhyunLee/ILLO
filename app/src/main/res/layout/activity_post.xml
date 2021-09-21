@@ -41,12 +41,13 @@
                 tools:listitem="@layout/item_tag" />
 
             <fragment
-                android:id="@+id/fragment_post2_content"
+                android:id="@+id/fragment_post_content"
                 android:name="com.example.illo.Post_Content_Fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/recyclerview_hashtag"
                 android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
                 android:layout_marginTop="16dp" />
 
             <fragment
@@ -54,7 +55,7 @@
                 android:name="com.example.illo.Post_Comment_Fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/fragment_post2_content"
+                android:layout_below="@+id/fragment_post_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"

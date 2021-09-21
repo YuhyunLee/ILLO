@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,8 +18,8 @@ import kotlinx.android.synthetic.main.fragment_home2_0.*
 class Home2_0_Fragment : Fragment() {
     val postList = arrayListOf<Post>()  // 게시글 데이터
 
-    lateinit var notice_recyclerView: RecyclerView // 공지 리사이클러뷰
-    val notice_Adpater = NoticeAdapter(postList)
+    lateinit var notice_recyclerView: RecyclerView  // 공지 리사이클러뷰
+    val notice_Adpater = NoticeAdapter(postList)    // 공지 어댑터
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -62,6 +63,12 @@ class Home2_0_Fragment : Fragment() {
             }
         }
 
+        // 공지글 더보기 버튼
+        val moreNoticeButton = view.findViewById<ImageView>(R.id.btn_more_notice)
+        moreNoticeButton.setOnClickListener {
+            // #공지 검색 결과로
+            Toast.makeText(activity, "#공지 검색 결과로", Toast.LENGTH_LONG).show()
+        }
         return view
     }
 

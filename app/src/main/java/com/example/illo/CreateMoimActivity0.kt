@@ -68,6 +68,7 @@ class CreateMoimActivity0 : AppCompatActivity() {
             // Intent 생성 (모임 만들기0 -> 모임 만들기1)
             val intent : Intent = Intent(this@CreateMoimActivity0, CreateMoimActivity1::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
 
             finish()
         }

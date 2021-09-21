@@ -6,11 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.ScaleAnimation
-import android.widget.AdapterView
 import android.widget.ImageView
 import androidx.appcompat.widget.SearchView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -98,10 +96,10 @@ class Home1_0_Fragment : Fragment() {
         })
 
         // fab 버튼
-        val fab_btn = view.findViewById<FloatingActionButton>(R.id.fab_home1_0)
-        fab_btn.setOnClickListener {
+        val fab_create_moim = view.findViewById<FloatingActionButton>(R.id.fab_home1_0)
+        fab_create_moim.setOnClickListener {
             // fab 애니메이션 실행
-            scaleUp(fab_btn, 500)
+            scaleUp(fab_create_moim, 500)
 
             // Intent 생성 (홈1 -> 모임 만들기)
             // Fragment --> Activity 이동

@@ -1,42 +1,51 @@
 package com.example.illo
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-val call_data = arrayListOf<Calouts>()
-val img_data = arrayListOf<PostImage>()
+val call_data = arrayListOf<Calouts>()  // 콜아웃 데이터
+lateinit var written_data : String      // 작성한 글 데이터
 
-class Post0_Fragment : Fragment() {
-    lateinit var call_recyclerView: RecyclerView
-    lateinit var img_recyclerView: RecyclerView
+class WritePost0_Text_Fragment : Fragment() {
+    lateinit var call_recyclerView: RecyclerView    // 콜아웃 리사이클러뷰
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_write_post0, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_write_post_step1_text, container, false)
 
-        createData()
+        // 콜아웃 데이터 생성
+        createCaloutsData()
 
-        // 리사이클러뷰 정리
+        // 콜아웃 리사이클러뷰 설정
         call_recyclerView = view.findViewById(R.id.recyclerview_calouts_write_post)
         call_recyclerView.setHasFixedSize(true)
         call_recyclerView.layoutManager = GridLayoutManager(activity, 7)
         call_recyclerView.adapter = CaloutsAdapter(call_data)
 
-        img_recyclerView = view.findViewById(R.id.recyclerview_img_write_post)
-        img_recyclerView.setHasFixedSize(true)
-        img_recyclerView.layoutManager = LinearLayoutManager(activity)
-        img_recyclerView.adapter = PostImageAdapter(img_data)
+        // 글 쓰기 구현
+        val writePostInput = view.findViewById<EditText>(R.id.input_write_post)
+        writePostInput.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                // 사용자가 쓴 글 저장
+                written_data = s.toString()
+            }
+        })
 
         return view
     }
@@ -46,7 +55,7 @@ class Post0_Fragment : Fragment() {
 
     }
 
-    fun createData() {
+    fun createCaloutsData() {
         call_data.add(Calouts("최예나"))
         call_data.add(Calouts("최예나"))
         call_data.add(Calouts("최예나"))
@@ -57,13 +66,10 @@ class Post0_Fragment : Fragment() {
         call_data.add(Calouts("최예나"))
         call_data.add(Calouts("최예나"))
 
-        img_data.add(PostImage(R.drawable.cat))
-        img_data.add(PostImage(R.drawable.wallet))
     }
 }
 
 data class Calouts(val name : String)
-data class PostImage(val img : Int)
 
 class CaloutsAdapter(private val dataSet: List<Calouts>) :
     RecyclerView.Adapter<CaloutsAdapter.CaloutsViewHolder>() {
@@ -95,35 +101,3 @@ class CaloutsAdapter(private val dataSet: List<Calouts>) :
 
 }
 
-
-class PostImageAdapter(private val dataSet: List<PostImage>) :
-    RecyclerView.Adapter<PostImageAdapter.PostImageViewHolder>() {
-
-    class PostImageViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val image : ImageView
-
-        init {
-            image = view.findViewById(R.id.img_post)
-        }
-    }
-
-    // Create new views (invoked by the layout manager)
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): PostImageViewHolder {
-        // Create a new view, which defines the UI of the list item
-        val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.item_image_post, viewGroup, false)
-
-        return PostImageViewHolder(view)
-    }
-
-    // Replace the contents of a view (invoked by the layout manager)
-    override fun onBindViewHolder(viewHolder: PostImageViewHolder, position: Int) {
-        viewHolder.image.setBackgroundResource(R.drawable.card_attached_picture)
-        viewHolder.image.clipToOutline = true
-        viewHolder.image.setImageResource(dataSet[position].img)
-    }
-
-    // Return the size of your dataset (invoked by the layout manager)
-    override fun getItemCount() = dataSet.size
-
-}

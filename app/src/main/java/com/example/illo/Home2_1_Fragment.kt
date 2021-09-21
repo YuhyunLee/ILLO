@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_home2_1.*
 
 //// 홈2(동아리 홈) 게시판 탭
@@ -51,6 +52,17 @@ class Home2_1_Fragment : Fragment() {
                 }
             }
         })
+
+        // fab 버튼
+        val fab_write_post = view.findViewById<FloatingActionButton>(R.id.fab_home2_1)
+        fab_write_post.setOnClickListener {
+            // 홈2 --> 글쓰기0 액티비티로 이동
+            // Fragment --> Activity 이동
+            activity?.let {
+                val intent: Intent = Intent(activity, WritePostActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
         return view
     }

@@ -9,17 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ILLO">
-        <activity android:name=".ScheduleActivity"></activity>
-        <activity android:name=".InputScheduleActivity"></activity>
+        <activity android:name=".ScheduleActivity" />
+        <activity android:name=".InputScheduleActivity" />
         <activity android:name=".PostModify1Activity" />
         <activity android:name=".PostModify0Activity" />
         <activity android:name=".PostActivity" />
-        <activity android:name=".WritePost1Activity" />
-        <activity android:name=".WritePost0Activity" />
+        <activity android:name=".WritePostActivity" />
         <activity android:name=".EditMoimInfoActivity1" />
         <activity android:name=".EditMoimInfoActivity0" />
-        <activity android:name=".Home2Activity">
-        </activity>
+        <activity android:name=".Home2Activity" />
         <activity android:name=".CreateMoimActivity1" />
         <activity android:name=".AlarmActivity" />
         <activity android:name=".CreateMoimActivity0" />

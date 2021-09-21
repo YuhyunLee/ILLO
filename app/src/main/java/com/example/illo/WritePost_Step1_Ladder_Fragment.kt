@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-class WritePost0_Draw_Fragment : Fragment() {
+class WritePost_Step1_Ladder_Fragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_write_post0_draw, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_write_post_step1_ladder, container, false)
 
         return view
     }

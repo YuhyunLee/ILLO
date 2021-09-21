@@ -14,8 +14,6 @@ class PostActivity : AppCompatActivity() {
             Post_Delete_Dialog().show(supportFragmentManager, "Post2_Delete_Dialog")
 
         }
-
-
     }
 
 //    public fun deleteAlertDialog() {

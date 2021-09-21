@@ -4,67 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PostModify0Activity">
+    android:background="@color/illo_white100">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_post_modify"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true">
-
-        <TextView
-            android:id="@+id/title_post_modify"
-            style="@style/IlloKrSubtitle2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="글 수정"
-            android:textColor="@color/illo_dark_purple"
-            android:textSize="14dp">
-
-        </TextView>
-
-        <ImageView
-            android:id="@+id/btn_write_post_ok"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/icon_ok" />
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <RelativeLayout
-        android:id="@+id/step_write_post"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar_post_modify">
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="6dp"
-            android:orientation="horizontal">
+            android:id="@+id/media_write_post"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <ImageView
+            <fragment
+                android:id="@+id/text_write_post"
+                android:name="com.example.illo.WritePost0_Text_Fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_img_write_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                tools:listitem="@layout/item_image_post" />
+
+            <fragment
+                android:id="@+id/draw_write_post"
+                android:name="com.example.illo.WritePost_Step1_Draw_Fragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_first_step_enable" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp" />
 
-            <ImageView
+            <fragment
+                android:id="@+id/ladder_write_post"
+                android:name="com.example.illo.WritePost_Step1_Ladder_Fragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/etc_step_connect" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_second_step_disable" />
         </LinearLayout>
-
-    </RelativeLayout>
+    </ScrollView>
 
     <View
         android:id="@+id/fade_background"
