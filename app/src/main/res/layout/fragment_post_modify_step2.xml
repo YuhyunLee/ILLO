@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/header_write_post_step2"
+        android:id="@+id/header_modify_post_step2"
         style="@style/IlloKrTitle1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,10 +17,10 @@
         android:textStyle="bold" />
 
     <EditText
-        android:layout_below="@+id/header_write_post_step2"
-        android:layout_alignStart="@+id/header_write_post_step2"
-        android:layout_alignEnd="@+id/header_write_post_step2"
-        android:id="@+id/input_hashtag"
+        android:layout_below="@+id/header_modify_post_step2"
+        android:layout_alignStart="@+id/header_modify_post_step2"
+        android:layout_alignEnd="@+id/header_modify_post_step2"
+        android:id="@+id/modify_hashtag"
         style="@style/IlloKrBody3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -25,13 +25,18 @@ class WritePost_Step1_Fragment : Fragment() {
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_write_post_step1, container, false)
 
-        // 데이터 생성
+        // 서버에서 데이터 가져오기
+        // ((임의로 데이터 생성))
         createImageData()
 
         // 이미지 리사이클러뷰 생성
         img_recyclerView = view.findViewById(R.id.recyclerview_img_write_post)
         img_recyclerView.setHasFixedSize(true)
-        img_recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        img_recyclerView.layoutManager = LinearLayoutManager(
+            activity,
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
         img_recyclerView.adapter = PostImageAdapter(img_data)
 
         // Fab 버튼 설정
@@ -41,22 +46,24 @@ class WritePost_Step1_Fragment : Fragment() {
 
     }
 
+
     fun FabSetting() {
         // 플로팅 버튼 클릭시 에니메이션 동작 기능
-        val addMediaFab = view?.findViewById<FloatingActionButton>(R.id.fab_add_media)
+        val addMediaFab = view?.findViewById<ImageView>(R.id.fab_add_media)
         addMediaFab?.setOnClickListener {
+            Toast.makeText(activity, "미디어 추가 버튼 클릭!", Toast.LENGTH_SHORT).show()
             OpenFab()
         }
 
         // 게임 버튼 클릭 이벤트
-        val gameFab = view?.findViewById<FloatingActionButton>(R.id.fab_game)
+        val gameFab = view?.findViewById<ImageView>(R.id.fab_game)
         gameFab?.setOnClickListener {
             Toast.makeText(activity, "게임 버튼 클릭!", Toast.LENGTH_SHORT).show()
             CloseFab()
         }
 
         // 갤러리 버튼 클릭 이벤트
-        val galleryFab = view?.findViewById<FloatingActionButton>(R.id.fab_gallery)
+        val galleryFab = view?.findViewById<ImageView>(R.id.fab_gallery)
         galleryFab?.setOnClickListener {
             Toast.makeText(activity, "갤러리 버튼 클릭!", Toast.LENGTH_SHORT).show()
             CloseFab()
@@ -98,9 +105,8 @@ class WritePost_Step1_Fragment : Fragment() {
     }
 }
 
-
 // 데이터 클래스
-data class PostImage(val img : Int)
+data class PostImage(val img: Int)
 
 class PostImageAdapter(private val dataSet: List<PostImage>) :
     RecyclerView.Adapter<PostImageAdapter.PostImageViewHolder>() {

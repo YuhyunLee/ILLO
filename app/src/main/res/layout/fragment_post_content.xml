@@ -14,7 +14,7 @@
             android:id="@+id/writer_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/medium_profile_1" />
+            android:background="@drawable/small_profile_1" />
 
         <TextView
             android:id="@+id/writer_name"
@@ -61,7 +61,7 @@
         tools:listitem="@layout/item_image_post" />
 
     <TextView
-        android:id="@+id/callouts_post"
+        android:id="@+id/mentions_post"
         style="@style/IlloKrCaption2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -73,21 +73,21 @@
         android:textColor="@color/illo_black20" />
 
     <ImageView
-        android:id="@+id/icon_likes_empty"
+        android:id="@+id/post_likes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/likes_num"
+        android:layout_toLeftOf="@+id/post_likes_num"
         android:src="@drawable/icon_empty_heart"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="4dp"
-        android:layout_alignTop="@id/likes_num" />
+        android:layout_alignTop="@id/post_likes_num" />
 
     <TextView
-        android:id="@+id/likes_num"
+        android:id="@+id/post_likes_num"
         style="@style/IlloKrBody2Underline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/callouts_post"
+        android:layout_alignTop="@+id/mentions_post"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="24dp"
         android:text="161"

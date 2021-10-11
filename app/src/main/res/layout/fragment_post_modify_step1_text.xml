@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/header_write_post_step1"
+            android:id="@+id/header_modify_post_step1"
             style="@style/IlloKrTitle1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,7 +25,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/header_write_post_step1"
+            android:layout_below="@+id/header_modify_post_step1"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="24dp"
@@ -37,7 +35,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/input_write_post"
+                android:id="@+id/input_modify_post"
                 style="@style/IlloKrBody3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -73,16 +71,13 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerview_mention_write_post"
+                android:id="@+id/recyclerview_mention_modify_post"
+                tools:listitem="@layout/item_tag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                tools:listitem="@layout/item_tag" />
-
+                android:layout_marginTop="12dp" />
 
         </LinearLayout>
 
     </RelativeLayout>
-
-
 </RelativeLayout>

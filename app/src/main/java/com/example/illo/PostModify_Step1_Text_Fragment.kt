@@ -1,43 +1,48 @@
 package com.example.illo
 
 import android.os.Bundle
-import android.os.Parcelable
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.parcel.Parcelize
-import kotlinx.android.synthetic.main.fragment_write_post_step1_text.*
-import java.io.Serializable
+import kotlinx.android.synthetic.main.fragment_post_modify_step1_text.*
 
-class WritePost_Step1_Text_Fragment : Fragment() {
+class PostModify_Step1_Text_Fragment : Fragment() {
     lateinit var mention_recyclerView: RecyclerView    // 멘션 리사이클러뷰
-    val mention_data = arrayListOf<Mention>()  // 멘션 데이터
-    lateinit var written_data : String      // 작성한 글 데이터
+    var mention_data = arrayListOf<Mention>()  // 멘션 데이터
+    lateinit var modified_data : String      // 수정한 글 데이터
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_write_post_step1_text, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_post_modify_step1_text, container, false)
 
         // 멘션 리사이클러뷰 설정
-        mention_recyclerView = view.findViewById(R.id.recyclerview_mention_write_post)
+        mention_recyclerView = view.findViewById(R.id.recyclerview_mention_modify_post)
         mention_recyclerView.setHasFixedSize(true)
         mention_recyclerView.layoutManager = GridLayoutManager(activity, 7)
         mention_recyclerView.adapter = MentionAdapter(mention_data)
 
+        // 데이터 받아오기
+        val text_data = arguments?.getString("원본 글")
+        val mentionList_data = arguments?.getSerializable("멘션")
+
+        // 원본 글 세팅
+        val modifyPostInput = view.findViewById<EditText>(R.id.input_modify_post)
+        // 원본 멘션
+        // 멘션 데이터에 넣어주기
+
         // 글 쓰기 구현
-        val writePostInput = view.findViewById<EditText>(R.id.input_write_post)
-        writePostInput.addTextChangedListener(object : TextWatcher {
+        modifyPostInput.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -45,7 +50,7 @@ class WritePost_Step1_Text_Fragment : Fragment() {
             override fun afterTextChanged(s: Editable?) {
                 // *----서버/DB 필요----*
                 // 사용자가 쓴 글 저장
-                written_data = s.toString()
+                modified_data = s.toString()
             }
         })
 
@@ -71,38 +76,4 @@ class WritePost_Step1_Text_Fragment : Fragment() {
         mention_data.add(mention)
         input_mention.setText("")
     }
-
 }
-
-data class Mention(val name : String) : Serializable
-
-class MentionAdapter(private val dataSet: List<Mention>) :
-    RecyclerView.Adapter<MentionAdapter.MentionViewHolder>() {
-
-    class MentionViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val name : TextView
-
-        init {
-            name = view.findViewById(R.id.tag_text)
-        }
-    }
-
-    // Create new views (invoked by the layout manager)
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): MentionViewHolder {
-        // Create a new view, which defines the UI of the list item
-        val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.item_tag, viewGroup, false)
-
-        return MentionViewHolder(view)
-    }
-
-    override fun onBindViewHolder(viewHolder: MentionViewHolder, position: Int) {
-        viewHolder.name.text = dataSet[position].name
-
-    }
-
-    // Return the size of your dataset (invoked by the layout manager)
-    override fun getItemCount() = dataSet.size
-
-}
-

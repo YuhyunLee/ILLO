@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import kotlinx.android.synthetic.main.dialog_post_delete.*
 
@@ -39,13 +40,17 @@ class Post_Delete_Dialog : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 수정하기 버튼 클릭 시
-        btn_cancel.setOnClickListener {
-
+        // 취소하기 버튼 클릭 시
+        val cancelButton = view.findViewById<TextView>(R.id.btn_cancel)
+        cancelButton.setOnClickListener {
+            dialog?.cancel()    // 다이얼로그 끝내기
         }
 
         // 삭제하기 버튼 클릭 시
-        btn_delete.setOnClickListener {
+        val deleteButton = view.findViewById<TextView>(R.id.btn_delete)
+        deleteButton.setOnClickListener {
+            // *----서버/DB 필요----*
+            // DB에서 게시물 삭제
 
         }
 

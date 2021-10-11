@@ -6,7 +6,7 @@
     android:background="@drawable/button_small_24">
 
     <TextView
-        android:id="@+id/txt_name"
+        android:id="@+id/tag_text"
         style="@style/IlloKrCaption2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

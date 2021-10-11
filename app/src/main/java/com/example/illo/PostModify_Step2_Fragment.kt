@@ -1,25 +1,29 @@
 package com.example.illo
 
-import android.content.Context
 import android.os.Bundle
+import android.text.Editable
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
 
-class WritePost_Step2_Fragment : Fragment() {
+class PostModify_Step2_Fragment: Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_write_post_step2, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_post_modify_step2, container, false)
+
+        // 서버에서 데이터 가져오기
+        val hashTag_data = arguments?.getString("해시태그")
+
+        // 해시태그에 원래 데이터 넣어주기
+        val modifyHashTag = view.findViewById<EditText>(R.id.modify_hashtag)
+        modifyHashTag.setText(hashTag_data)
 
         return view
     }
@@ -31,7 +35,4 @@ class WritePost_Step2_Fragment : Fragment() {
     }
 
 }
-
-
-
 

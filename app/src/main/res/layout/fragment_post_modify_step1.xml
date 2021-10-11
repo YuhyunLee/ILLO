@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/illo_white100">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,19 +12,19 @@
         android:fillViewport="true">
 
         <LinearLayout
-            android:id="@+id/media_write_post"
+            android:id="@+id/media_modify_post"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <fragment
-                android:id="@+id/text_write_post"
-                android:name="com.example.illo.WritePost_Step1_Text_Fragment"
+                android:id="@+id/text_modify_post"
+                android:name="com.example.illo.PostModify_Step1_Text_Fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerview_img_write_post"
+                android:id="@+id/recyclerview_img_modify_post"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -35,8 +34,8 @@
                 tools:listitem="@layout/item_image_post" />
 
             <fragment
-                android:id="@+id/draw_write_post"
-                android:name="com.example.illo.PostModify_Step1_Draw_Fragment"
+                android:id="@+id/draw_modify_post"
+                android:name="com.example.illo.WritePost_Step1_Draw_Fragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -46,8 +45,8 @@
                 android:layout_marginBottom="16dp" />
 
             <fragment
-                android:id="@+id/ladder_write_post"
-                android:name="com.example.illo.PostModify_Step1_Ladder_Fragment"
+                android:id="@+id/ladder_modify_post"
+                android:name="com.example.illo.WritePost_Step1_Ladder_Fragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -59,44 +58,44 @@
     </ScrollView>
 
     <View
-        android:id="@+id/fade_background"
+        android:id="@+id/modify_fade_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/illo_black60"
         android:visibility="invisible" />
 
     <ImageView
-        android:id="@+id/fab_game"
+        android:id="@+id/modify_fab_game"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/fab_add_media"
-        android:layout_alignTop="@+id/fab_add_media"
-        android:layout_alignEnd="@+id/fab_add_media"
-        android:layout_alignBottom="@+id/fab_add_media"
+        android:layout_alignStart="@+id/modify_fab_add_media"
+        android:layout_alignTop="@+id/modify_fab_add_media"
+        android:layout_alignEnd="@+id/modify_fab_add_media"
+        android:layout_alignBottom="@+id/modify_fab_add_media"
         android:backgroundTint="@color/illo_dark_purple"
         android:src="@drawable/icon_fab_game"
         app:maxImageSize="52dp" />
 
     <ImageView
-        android:id="@+id/fab_gallery"
+        android:id="@+id/modify_fab_gallery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/fab_add_media"
-        android:layout_alignTop="@+id/fab_add_media"
-        android:layout_alignEnd="@+id/fab_add_media"
-        android:layout_alignBottom="@+id/fab_add_media"
+        android:layout_alignStart="@+id/modify_fab_add_media"
+        android:layout_alignTop="@+id/modify_fab_add_media"
+        android:layout_alignEnd="@+id/modify_fab_add_media"
+        android:layout_alignBottom="@+id/modify_fab_add_media"
         android:backgroundTint="@color/illo_dark_purple"
         android:src="@drawable/icon_fab_gallery"
         app:maxImageSize="52dp" />
 
     <ImageView
-        android:id="@+id/fab_add_media"
+        android:id="@+id/modify_fab_add_media"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/icon_fab_plus"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="24dp" />
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/icon_fab_plus" />
 
 </RelativeLayout>

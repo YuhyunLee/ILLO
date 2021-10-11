@@ -68,9 +68,8 @@
 
     </RelativeLayout>
 
-    <fragment
-        android:id="@+id/fragment_write_post_step1"
-        android:name="com.example.illo.WritePost_Step1_Fragment"
+    <RelativeLayout
+        android:id="@+id/fragment_container_write_post"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/step_write_post" />

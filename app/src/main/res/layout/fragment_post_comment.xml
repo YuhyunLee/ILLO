@@ -12,7 +12,7 @@
             android:id="@+id/commenter_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/medium_profile_2" />
+            android:background="@drawable/small_profile_2" />
 
         <TextView
             android:id="@+id/commenter_name"
@@ -46,6 +46,7 @@
         android:background="@drawable/etc_comment">
 
         <TextView
+            android:id="@+id/comment_text"
             style="@style/IlloKrBody3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
